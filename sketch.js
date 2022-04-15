@@ -124,7 +124,7 @@ function draw(){
   //trex.bounceOff(edges);
   
   drawSprites();
-  text("Score: "+score,500,50);
+  text("Score: "+score,width-100,50);
 }
 
 function clouds(){
