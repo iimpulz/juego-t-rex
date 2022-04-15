@@ -36,15 +36,15 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   
   //crear sprite de Trex
-  trex = createSprite(50,height/2,20,50);
+  trex = createSprite(50, height/2, 20, 50);
   trex.addAnimation("running", trex_running);
-  trex.addAnimation("collided",trex_collider);
+  trex.addAnimation("collided", trex_collider);
   edges = createEdgeSprites();
-  gameover = createSprite(width/2,height/2-100);
+  gameover = createSprite(width/2,height/2 -100);
   gameover.addImage(gameoverImg);
   gameover.scale=0.5;
   gameover.visible=false;
-  restart = createSprite(width/2,height/2-50);
+  restart = createSprite(width/2,height/2 -50);
   restart.addImage(restartImg);
   restart.scale=0.5;
   restart.visible=false;
@@ -53,9 +53,9 @@ function setup(){
   trex.scale = 0.5;
   trex.x = 50;
 
-  ground = createSprite(width/2,height-20,400,20);
+  ground = createSprite(width/2,height -20,400,20);
   ground.addImage("ground", groundImg);
-  invisibleground = createSprite(width/2,height-10,width,10);
+  invisibleground = createSprite(width/2,height -10,width,10);
   invisibleground.visible = false;
   cloudsGroup=createGroup();
   cactusGroup=createGroup();
