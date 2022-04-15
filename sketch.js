@@ -111,7 +111,7 @@ function draw(){
     gameover.visible=true;
     restart.visible=true;
     trex.velocityY = 0;
-    if(mousePressedOver(restart) || touches.length>0){
+    if(touches.length>0 || mousePressedOver(restart)){
       reset();
       touches=[];
     }
@@ -135,7 +135,7 @@ function clouds(){
     cloud.y = Math.round(random(10,height-100));
     cloud.depth = trex.depth;
     trex.depth+=1;
-    cloud.lifetime = 400;
+    cloud.lifetime = 500;
     cloudsGroup.add(cloud);
   }
 }
