@@ -40,11 +40,11 @@ function setup(){
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided", trex_collider);
   edges = createEdgeSprites();
-  gameover = createSprite(width/2,height-300);
+  gameover = createSprite(width/2,height/2 -100);
   gameover.addImage(gameoverImg);
   gameover.scale=0.5;
   gameover.visible=false;
-  restart = createSprite(width/2,height-250);
+  restart = createSprite(width/2,height/2 -50);
   restart.addImage(restartImg);
   restart.scale=0.5;
   restart.visible=false;
@@ -111,7 +111,7 @@ function draw(){
     gameover.visible=true;
     restart.visible=true;
     trex.velocityY = 0;
-    if(mousePressedOver(restart) || toches.length>0){
+    if(mousePressedOver(restart) || touches.length>0){
       reset();
       touches=[];
     }
